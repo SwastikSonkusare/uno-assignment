@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import Header from "./components/Header/Header";
+import Card from "./components/Card/Card";
+import Tabs from "./components/Tabs/Tabs";
 
-function App() {
+const App = () => {
+  const [theme, setTheme] = useState("light");
+
+  const toggleTheme = () => {
+    setTheme(theme === "light" ? "dark" : "light");
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={theme === "light" ? "container light" : "container dark"}>
+      <Header theme={theme} toggleTheme={toggleTheme} />
+      <Tabs theme={theme} />
+      <Card theme={theme} />
     </div>
   );
-}
+};
 
 export default App;

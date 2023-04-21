@@ -1,0 +1,52 @@
+.tabs {
+    position: relative;
+    border-bottom: 1px solid var(--color-gray-primary);
+}
+
+.tabs, .tabs__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.tabs__container {
+    padding: 0 0.5rem 1rem 0.5rem;
+    gap: .5rem;
+    cursor: pointer;
+}
+
+.tabs__container h4 {
+    color:  var(--color-pale-sky);
+}
+
+.tabs__container.active {
+    border-bottom: 2px solid var(--color-purple);
+}
+
+.tabs__container.active path {
+    fill: var(--color-purple);
+}
+
+
+
+.tabs__container.active h4 {
+    font-weight: bolder;
+    color:  var(--color-purple);
+}
+
+
+/* DARK THEME */
+.tabs__container.active.dark {
+    border-bottom: 2px solid var(--color-ebony);
+}
+
+.tabs__container.dark h4 {
+    color: var(--color-white);
+}
+.tabs__container.active.dark h4, .tabs__container.active.dark path {
+    color: var(--color-ebony);
+    fill: var(--color-ebony);
+
+}
+
+
