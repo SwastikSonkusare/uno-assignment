@@ -72,7 +72,7 @@ export const userDetails = [
   {
     id: 5,
     icon: IMAGES.location,
-    text: "location",
+    text: "Location",
     text2: "New York, NY, USA",
   },
   {

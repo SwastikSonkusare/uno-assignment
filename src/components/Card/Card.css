@@ -96,6 +96,14 @@
 
 
 /* DARK THEME */
+.user__contact-save.dark {
+    background: var(--color-white);
+}
+
+.user__contact-save.dark small {
+    color: var(--color-purple);
+}
+
 .user__details > .user__details-container.dark:nth-child(-n+3) > div > h4 {
     color: var(--color-ebony);
 }
